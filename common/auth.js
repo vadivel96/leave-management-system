@@ -1,7 +1,8 @@
+require('dotenv').config();
 const bcrypt=require('bcrypt');
 const round=10;
 const jwt=require('jsonwebtoken');
-const secret='!@#$$#@#$%&*()(&^%$#$%^&%$%#@##@!@#$%^&*&*(&*^%$';
+const secret=process.env.JWT_SECRET;
 const expiryTime='10m';
 
 const hashPassword=(password)=>{
@@ -36,7 +37,7 @@ const roleHR=(req,res,next)=>{
     if(req.storedDecodedToken)
         {
             let data=req.storedDecodedToken;
-            data.role==='HR'
+            data.role==='HrManager'
             ? next()
             : res.status(401).send({message:"only HR can Access"})
         }
