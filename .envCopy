@@ -1,0 +1,23 @@
+## env variables for newRelic
+
+NEW_RELIC_APP_NAME=leave-management-system
+
+NEW_RELIC_LICENSE_KEY=eu01xxe0ea88d86b8a76b44c68b2eeb9FFFFNRAL
+
+## database credentials
+
+DB_USER=postgres
+DB_PASSWORD=Vl632479!!
+DB_HOST=localhost
+DB_PORT=5433
+DB_NAME=leave_management_system
+
+
+## JWT secret 
+
+JWT_SECRET="this_is_secret_key_!@#$$#@#$%&*()(&^%$#$%^&%$%#@##@!@#$%^&*&*(&*^%$"
+
+
+
+PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----\nMIIEpAIBAAKCAQEAo01xCQz2FnKZqopgTJ3Ehd6SUaN1g5IRKvW0RYCYF78fGdQG\n+duHZmRGxGHjFwErmnIZE3TtO+o3XwuHyyNyAXgDUk7uSEw6vlzCjAmZRERD0fEa\niFsMLUcClypfLMWpjmhTFEkLBhj1wqZARpnAi6Jgh/RGPrwb0vcvrxdlfBnm5Ybf\nk8DbysGr7qdbJwR0kQ/L6gCdLAni42llc7yjFN9ISZJR64yGsq1skdOokuHoocSr\nlesHdR8hcklStUuPg5vxx+vhNQy2ZmiFbR8ERD/rbPmbbi/tE2W3U2U4V5WRLk36\n72Zhry8jIpnBB+htdammeZ7r45Y89erL6cbEWQIDAQABAoIBABG/xmoGir5GmzFc\nLCqTqMMonXRqXOjNoNhPn5YAy7ckBqI453+zdsBgJIlufr9WuRmmrldNKYZONxG5\nZ/tiKT9j3w+MhO1efLGJVTthhTM0bL8mMp0wsS6AJfXObQ0JmFviNqpxJHW3k4mi\nJoEN7821esK4IATsTuVjiL8h/r2pyhAJOfvW97RLuaxR5+dWgVdmu3yjmFxsDnE8\npcsIuXrWknS7t4ESYtZ+4GKlmt8HZ00ltR7qgC3gmCVDjmmMW1s0pkIgc7gsZZ3m\nb3us0gxdqSPpmtpxWkfpBe741A9SoWKLPQw6WfebvTzR5qgX7I8Gnz3YB8f73RrL\n5rdL2AECgYEA1X/EtmejwJEt5A9Tc1nkYIioWn+MTY9eOFB9xpOEjskDvDxQGGPD\n3yoIdE936PeukBH1Xh2IKMBIZ7xvmZrjenWgJwC+5fBdd+e1z+Bpq9xArU8qBqVL\nnuB70llerkAtLXteYz2VL+xTmC7V8FsQifzr4iJ69nmtaIh+QoDHPFkCgYEAw8+U\ni0+mgVCABQ6wOt28rV8CtrdEYackDwyyifmhyikKIJY8LITc+hKUpgwZcuXlHeFM\nGwncDJ5k0vQs6Dz+MfBGaY6M4KaXqqAjQLPbmWMB6Asxygk6rXABBcIJRQh9mYHd\niMWjBfrFjbDBcILGAyUapHV/14eZX7RRiE1qyAECgYEAm1fFBMdyIZpA3tC78pF0\nlzy36mkl6AUqFCWU7pjFebMPMbZcvPJSQZ1u21o7MFqPPCqk8t7gBG6sADbeqNBH\nNgJCDj7/p4T2LVl+M4vgt3ih4rhYJs+8rxQ9Y/c86eKuPIqoSeM0GtOEm5Vwett3\ntD9ATqCyAYbVQtsVq0PSM7kCgYEAt6shWZ9Hvmpk+tlxQnY1AaZqJDs5gCPINfmi\nCrvGH5tpLXHeVZ/2qvb8ydf1kwnDZMism3wfFRMJ3bo92UVE5lDLqz2UNTDueJSn\nHIzYgkMVSbQearVHfeHeg6kjCsbREUl4JE/F/9jer25JtCBmXhLSr8qrNN6zZcr8\n405CyAECgYAdZxiac1ftmeRib3/EmfUTd9tMmchUvOyV/j9h+PpuMO2sGyDgW2oH\nTfEW2wKIGUsEicP1QxBYUIU48jHJK3zHe/qGpVQfoNosoVNMjQc0ohfiG2OZkHUH\nmYknV9r2EMlwoN0jHcNBECD00Fz6WvKgqBPLqgJoaDC28P48FVya3A==\n-----END RSA PRIVATE KEY-----\n"
+PUBLIC_KEY="-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo01xCQz2FnKZqopgTJ3E\nhd6SUaN1g5IRKvW0RYCYF78fGdQG+duHZmRGxGHjFwErmnIZE3TtO+o3XwuHyyNy\nAXgDUk7uSEw6vlzCjAmZRERD0fEaiFsMLUcClypfLMWpjmhTFEkLBhj1wqZARpnA\ni6Jgh/RGPrwb0vcvrxdlfBnm5Ybfk8DbysGr7qdbJwR0kQ/L6gCdLAni42llc7yj\nFN9ISZJR64yGsq1skdOokuHoocSrlesHdR8hcklStUuPg5vxx+vhNQy2ZmiFbR8E\nRD/rbPmbbi/tE2W3U2U4V5WRLk3672Zhry8jIpnBB+htdammeZ7r45Y89erL6cbE\nWQIDAQAB\n-----END PUBLIC KEY-----\n"

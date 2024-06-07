@@ -10,6 +10,7 @@ const pgClient=new Client({
     database:process.env.DB_NAME
 })
 
+
 pgClient.connect()
 .then(()=>{
     console.log('connected to postgrsql database');

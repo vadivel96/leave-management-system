@@ -2,9 +2,18 @@ require('dotenv').config();
 const bcrypt=require('bcrypt');
 const round=10;
 const jwt=require('jsonwebtoken');
+const { callBackjwtVerify } = require('./callBackJwtVerify');
+const { generateRandomValueBw0to9 } = require('../utilityFunctions/generateRandomInteger');
+const { updateTokenAlgorithm } = require('./updateTokenAlgorithm');
 const secret=process.env.JWT_SECRET;
-const expiryTime='10m';
-
+const AccessTokenExpiryTime='10m';
+const RefreshTokenExpiryTime='7d'
+const algorithms = ['RS256', 'RS384', 'RS512', 'PS256', 'PS384', 'PS512', 'ES256', 'ES384', 'ES512', 'EdDSA'];
+const payload = {
+    sub: "user_id",
+    name: "John Doe",
+    iat: Math.floor(Date.now() / 1000) // Issued at time
+  };
 const hashPassword=(password)=>{
     let salt=bcrypt.genSalt(round);
     let hashedPassword=bcrypt.hash(password,salt);
@@ -13,7 +22,20 @@ const hashPassword=(password)=>{
 
 const hashCompare=(password,hashedPassword)=>bcrypt.compare(password,hashedPassword);
 
-const createToken=(payload)=>jwt.sign(payload,secret,{expiresIn:expiryTime});
+const createAccessToken=(payload)=>jwt.sign(payload,process.env.PUBLIC_KEY,{algorithm:process.env.TOKEN_ALGORITHM,expiresIn:AccessTokenExpiryTime});
+
+const createRefreshToken=(payload)=>{
+    const randomValue = generateRandomValueBw0to9();
+    const selectedAlgorithm = algorithms[randomValue];
+    const updatedTokenAlgorithmResult=updateTokenAlgorithm('TOKEN_ALGORITHM',selectedAlgorithm)
+    if(updatedTokenAlgorithmResult){
+       return jwt.sign(payload,process.env.PRIVATE_KEY,{algorithm:selectedAlgorithm,expiresIn:RefreshTokenExpiryTime})
+    }else{
+       return `Error in creating Refresh Token ..!!`
+    }
+};
+
+const verifyToken=(token)=>jwt.verify(token, process.env.PUBLIC_KEY, { algorithms: [process.env.TOKEN_ALGORITHM] } ,callBackjwtVerify);
 
 const decodeToken=(token)=>jwt.decode(token);
 
@@ -46,4 +68,7 @@ const roleHR=(req,res,next)=>{
         }
 }
 
-module.exports={hashCompare,hashPassword,createToken,decodeToken,validate,roleHR}
+module.exports={hashCompare,hashPassword,createToken,verifyToken,decodeToken,validate,roleHR,algorithms}
+
+
+      
